@@ -15,6 +15,27 @@
 	<link rel="stylesheet" href="../materialize/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet"  href="../cdn/sweetalert2.css">
+
+	<!-- para generar espacio a la derecha del menu para el contenido -->
+	<style media="screen">
+		  header, main, footer {
+      padding-left: 300px;
+    }
+
+/* para quitar el boton del menu cuando esta en pantalla grande */
+	.button-collpase{
+		display: none;
+	}
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+      /*para poner el boton del menu cuando la pantalla esta chiquita */
+      .button-collpase{
+      	display: inherit;
+      }
+    }
+	</style>
 	
 	<title>Proyecto</title><!--aqui va el contendio -->
 </head>
@@ -22,3 +43,4 @@
 
 <main>
 
+	<?php include 'menu_admin.php' ?>
