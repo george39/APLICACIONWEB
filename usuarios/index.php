@@ -1,4 +1,4 @@
-<!-- 1. formulario de usuario parte 1 -->
+<!-- 2.0 formulario de usuario parte 1 -->
 <?php include '../extend/header.php';
 
 ?>
@@ -20,7 +20,7 @@
 	</div>
 </div>
 
-<?php include '../extend/scripts.php;' ?>
+<?php include '../extend/scripts.php'; ?>
 
 </body>
 </html>

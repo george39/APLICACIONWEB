@@ -10,6 +10,11 @@
 
 <script>
 	$('.button-collpase').sideNav();/*1.5 para que funcione el menu en celulares */
+
+	function may(obj, id){ /*2.1 para convertir minusculas a mayusculas */
+	obj = obj.toUpperCase();
+	document.getElementById(id).value = obj;
+	}
 </script>
 
  
