@@ -7,6 +7,9 @@
 
 <script src="../js/materialize.min.js"></script> 
 <script src="../cdn/sweetalert2.js"></script>
+<script>
+	$('.button-collpase').sideNav();/*para que funcione el menu en dispositivos pequeños
+</script>
 
 
 
