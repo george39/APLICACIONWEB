@@ -22,7 +22,7 @@
 
 					<!-- para ingresar contraseña -->
 					<div class="input-field">
-						<input type="password" name="pass1" title="CONTRASEÑA CON NUMEROS, LETRAS MAYUSCULAS Y MINUSCULAS ENTRE 8 Y 15 CARACTERES" pattern="[A-Za-z0-9]{8,15}" id="pas1" required>
+						<input type="password" name="pass1" title="CONTRASEÑA CON NUMEROS, LETRAS MAYUSCULAS Y MINUSCULAS ENTRE 8 Y 15 CARACTERES" pattern="[A-Za-z0-9]{8,15}" id="pass1" required>
 						<label for="pass1">Contraseña</label>
 					</div>
 
@@ -60,6 +60,8 @@
 							<input class="file-path validate" type="text">
 						</div>
 					</div>
+<button type="submit" class="btn black" id="btn_guardar">Guardar<i class="material-icons">send</i> </button>
+
 				</form>
 			</div>
 		</div>
@@ -68,21 +70,10 @@
 
 <?php include '../extend/scripts.php'; ?>
 
-<!--2.3 validar que el usuario existe en la bd con metodo ajax -->
-<script>
-	$('#nick').change(function() {
-		$.post('ajax_validacion_nick.php',{
-			nick:$('#nick').val(),
 
-			beforeSend: function(){
-				$('validacion').html("Espere un momento por favor");
-			}
-
-		}, function(respuesta){
-			$('.validacion').html(respuesta);
-		});
-	});
-</script>
+<!--2.6 de aqui se pasaron los scripts a js -->
+<?php include '../extend/scripts.php'; ?>
+<script src="../js/validacion.js"></script>
 
 </body>
 </html>
