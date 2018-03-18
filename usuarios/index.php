@@ -19,6 +19,47 @@
 
 					<!--2.3 validar si el usuario existe en la bd -->
 					<div class="validacion"></div>
+
+					<!-- para ingresar contraseña -->
+					<div class="input-field">
+						<input type="password" name="pass1" title="CONTRASEÑA CON NUMEROS, LETRAS MAYUSCULAS Y MINUSCULAS ENTRE 8 Y 15 CARACTERES" pattern="[A-Za-z0-9]{8,15}" id="pas1" required>
+						<label for="pass1">Contraseña</label>
+					</div>
+
+					<!--2.5 para verificar contraseña -->
+					<div class="input-field">
+						<input type="password" name="pass1" title="CONTRASEÑA CON NUMEROS, LETRAS MAYUSCULAS Y MINUSCULAS ENTRE 8 Y 15 CARACTERES" pattern="[A-Za-z0-9]{8,15}" id="pass2" required>
+						<label for="pass2">Verificar contraseña</label>
+
+						<!--2.5 para el nivel del usuario -->
+					<select name="nivel" required>
+						<option value="" disabled selected>ELIGE UN NIVEL DE USUARIO</option>
+						<option value="ADMINISTRADOR">ADMINISTRADOR</option>
+						<option value="ASESOR">ASESOR</option>
+					</select>
+
+					<!--2.5 para el nombre de usuario -->
+					<div class="input-field">
+						<input type="text" name="nombre" title="Nombre de usuario" id="nombre" onblur="may(this.value, this.id)" required pattern="[A-Z/s ]+">
+						<label for="nombre">Nombre completo del usuario</label>
+					</div>
+
+					<!--2.5 para el correo de usuario -->
+					<div class="input-field">
+						<input type="email" name="correo" title="Correo electronico" id="correo" >
+						<label for="corre">Correo electronico</label>
+					</div>
+
+					<!--2.5 para la foto del usuario-->
+					<div class="file-field input-field">
+						<div class="btn">  
+							<span>Foto</span>
+							<input type="file" name="foto" >
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" type="text">
+						</div>
+					</div>
 				</form>
 			</div>
 		</div>
