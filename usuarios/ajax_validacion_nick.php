@@ -16,4 +16,5 @@ if ($row != 0) {
 }
 # para cerrar la conexion y a minimizar recursos
 $con->close()
+
 ?>
