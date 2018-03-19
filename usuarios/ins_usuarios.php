@@ -1,5 +1,5 @@
 <!--2.7 -->
-<?php
+<?php 
 #en este archivo se resiven las variable de php
 #hacemos llamado a la conexion 
 include '../conexion/conexion.php';
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	#guardar los datos de el formulario en la base de datos 
 $pass1 = sha1($pass1);  #para encriptar las contraseñas
-$ins = $con->query("INSERT INTO usuario VALUES('','$nick','$pas1','$nombre','$correo','$nivel',1,'$ruta')"); #en numero 1 significa que esl usuario esta activo 
+$ins = $con->query("INSERT INTO usuario VALUES('','$nick','$pass1','$nombre','$correo','$nivel',1,'$ruta')"); #en numero 1 significa que esl usuario esta activo 
 if ($ins) {
 		header('location:../extend/alerta.php?msj=El usuario ha sido registrado&c=us&p=in&t=success');
 	}else {

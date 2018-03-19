@@ -30,6 +30,15 @@ switch ($c) {
 	case 'us':
 		$carpeta = '../usuarios/';
 		break;
+
+		#3.3
+	case 'home':
+		$carpeta = '../inicio/';
+		break;
+
+	case 'salir':
+		$carpeta = '../';
+		break;
 					
 }
 
@@ -37,6 +46,14 @@ switch ($p) {
 	case 'in': /* in es un valor y quiere decir index */
 		$pagina = 'index.php';
 		break;
+	#3.3
+	case 'home':
+		$pagina = 'index.php';
+		break;
+
+	case 'salir':
+		$pagina = '';
+		break;		
 
 	
 			

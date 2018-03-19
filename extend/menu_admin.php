@@ -9,7 +9,7 @@
 			<div class="background">
 				<img src="../img/fondo.jpg">
 			</div> 
-			<a href="" ><img src="../img/perfil.jpg" class="circle" alt=""></a>
+			<a href="" ><img src="../img/carro.jpg" class="circle" alt=""></a>
 			<!--aqui actualizamos los datos del usuario admin -->
 			<a href="" class="white-text">Jorge Isaza</a> <br> <!--aqui nos traemos los datos de la bd del usuario -->
 			<a href="" class="white-text">Correo@</a>

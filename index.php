@@ -1,5 +1,5 @@
-<!--este codigo es para que la sesion no se cierre aunque se cierre el navegador  -->
-<?php @session_start();
+<!--3.3 este codigo es para que la sesion no se cierre aunque se cierre el navegador  -->
+<?php @session_start(); 
 if (isset($_SESSION['nick'])) { #pregunta si existe la variable desision
 	header('location:inicio');
 } 
@@ -24,7 +24,7 @@ if (isset($_SESSION['nick'])) { #pregunta si existe la variable desision
 		<!--formulario de logueo -->
 		<div class="row">  <!-- para el logo -->
 			<div class="input-field col s12 center">
-				<img src="img/logo.jpg" width="200" class="circle">
+				<img src="img/matrix.jpg" width="200" class="circle">
 			</div>
 		</div>
 		<div class="container">
