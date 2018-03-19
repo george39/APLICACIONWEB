@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	#2.9
 	#validaion del formulario con php 
-	if (empty($nick) || empty($pas1) || empty($nombre)) {
+	if (empty($nick) || empty($pass1) || empty($nombre)) {
 		header('location:../extend/alerta.php?msj=Hay un campo sin especificar&c=us&p=in&t=error');
 		exit;
 	}
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 
 	$usuario = strlen($nick);
-	$contrasenia = strlen($pas1);
+	$contrasenia = strlen($pass1);
 
 	if ($usuario < 8 || $usuario >15) {
 		header('location:../extend/alerta.php?msj=El nick debe contener entre 8 y 15 caracteres&c=us&p=in&t=error');
@@ -58,6 +58,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			header('location:../extend/alerta.php?msj=El email no es valido&c=us&p=in&t=error');
 		exit;
 		}
+	}
+
+	#3.0 para guardar la imagen de perfil
+	$extension ='';
+	$ruta ='foto_perfil';
+	$archivo = $_FILES['foto']['tmp_name']; #nombre temporal del archivo
+	$nombrearchivo = $_FILES['foto']['name'];
+	$info = pathinfo($nombrearchivo);
+	# si el usuario elige una foto de perfil
+	if ($archivo !='') {
+		$extension = $info['extension'];
+		if ($extension == "png" || $extension == "PNG" || $extension == "jpg" || $extension == "JPG") {
+			move_uploaded_file($archivo, 'foto_perfil/'.$nick.'.'.$extension);
+			$ruta = $ruta."/".$nick.'.'.$extension; #con punto se concatena
+		}else {
+			header('location:../extend/alerta.php?msj=El fromato no es valido&c=us&p=in&t=error');
+		exit;
+		}
+		
+	}else {
+		$ruta = "foto_perfil/matrix.jpg"; #por si el usuario no sube ninguna foto se le da una por defecto
 	}
 
 }else {   
